@@ -1,4 +1,93 @@
-{% extends "base.html" %}
+{% extends 'base.html' %}
+
 {% block content %}
-homepage
-{% endblock content%}
+{% load static %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Our Services</h1>
+    <div class="row">
+        <!-- Waste Management Educational -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{% static 'images/educ.jpeg' %}" class="card-img-top" alt="Waste educational services">
+                <div class="card-body">
+                    <a href="">
+                        <h5 class="card-title">Educational</h5>
+                    </a>
+                    <p class="card-text">Learn how to handle wastes</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Upload Waste Images -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{% static 'images/upload.jpeg' %}" class="card-img-top" alt="Upload Waste Images">
+                <div class="card-body">
+                    <a href="{% url 'accounts:upload_image' %}">
+                        <h5 class="card-title">Upload Waste Images</h5>
+                    </a>
+                    <p class="card-text">Upload waste images for analysis, classification and proper handling advice.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Consultation -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{% static 'images/consult.jpeg' %}" class="card-img-top" alt="Consultation">
+                <div class="card-body">
+                    <a href="#">
+                        <h5 class="card-title">Consultation</h5>
+                    </a>
+                    <p class="card-text">Get expert advice on waste management and related concerns.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Waste Handling Equipment for Sale -->
+        <div class="col-md-4">
+            <div class="card mb-4">
+                <img src="{% static 'images/equip.jpeg' %}" class="card-img-top" alt="Waste Handling Equipment">
+                <div class="card-body">
+                    <a href="#">
+                        <h5 class="card-title">Waste collectionservices</h5>
+                    </a>
+                    <p class="card-text">Call for watse collection services</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Blog post -->
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <a href="#">
+                <img src="{% static 'images/blog.jpeg' %}" class="card-img-top" alt="Upload Waste Images">
+            </a>
+            <div class="card-body">
+                <a href="{% url 'accounts:blog' %}">
+                    <h5 class="card-title">Blogs</h5>
+                </a>
+                <p class="card-text">See posts from other users on how they handle wastes.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Recycle Waste -->
+
+    <div class="col-md-4">
+        <div class="card mb-4">
+            <a href="#" class="text-decoration-none">
+                    <img src="{% static 'images/recycle1.jpeg' %}" class="card-img-top" alt="Upload Waste Images">
+                    <div class="card-body">
+                        <h5 class="card-title">Recycle wastes</h5>
+                    </div>
+                </a>
+                <div class="card-body">
+                    <p class="card-text">Make use of the available wastes for reuse.</p>
+                </div>
+        </div>
+    </div>
+    
+    
+</div>
+{% endblock %}

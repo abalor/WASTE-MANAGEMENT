@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Consultation</h1>
+    <p>Need expert advice on waste management, recycling, or waste equipment? Book a consultation with our specialists.</p>
+    
+    <form method="post">
+        {% csrf_token %}
+        <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter your email" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="consultation_type">Consultation Type</label>
+            <select class="form-control" id="consultation_type" name="consultation_type" required>
+                <option value="Waste Management">Waste Management</option>
+                <option value="Recycling">Recycling</option>
+                <option value="Waste Equipment">Waste Equipment</option>
+            </select>
+        </div>
+        
+        <button type="submit" class="btn btn-primary">Book Consultation</button>
+    </form>
+</div>
+{% endblock %}
