@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="shadow-wrap">
+    <div class="form-wrap">
+        <h1 class="display-4 text-center text-primary mt-4 font-weight-bold">
+            WASTE MANAGEMENT
+        </h1>
+        
+        <h3>Sign Up</h3>
+        <form method="post">
+            {% csrf_token %}
+            <div>
+                {{ form.username.label_tag }}
+                {{ form.username }}
+            </div>
+            <div>
+                {{ form.password1.label_tag }}
+                {{ form.password1 }}
+            </div>
+            <div>
+                {{ form.password2.label_tag }}
+                {{ form.password2 }}
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <a class="signup-link" href="{% url 'accounts:login' %}">
+            Already have an account? Login
+        </a>
+    </div>
+</div>
+{% endblock content %}
