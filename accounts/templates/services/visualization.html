@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container mt-5">
+    <h1 class="text-center mb-4">Visualization for {{ image.name }}</h1>
+    <p>Number of Likes: {{ likes_count }}</p>
+    <p>Number of Comments: {{ comments_count }}</p>
+    <a href="{% url 'accounts:image_detail' image.id %}" class="btn btn-secondary">Back to Image</a>
+</div>
+{% endblock %}
