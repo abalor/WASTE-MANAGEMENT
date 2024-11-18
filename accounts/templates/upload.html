@@ -1,12 +1,16 @@
-{% extends 'base.html' %}
-
+{% extends "base1.html" %}
 {% block content %}
-<div class="container mt-5">
-    <h1 class="text-center mb-4">Upload Waste Images</h1>
-    <form method="post" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit" class="btn btn-primary">Upload Image</button>
-    </form>
+<div class="shadow-wrap">
+    <div class="form-wrap">
+        <h1 class="display-4 text-center text-primary mt-4 font-weight-bold">
+            WASTE MANAGEMENT
+        </h1>
+        <h3>Upload Waste Image</h3>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {{ form.as_p }}  <!-- Render form fields as paragraphs -->
+            <button type="submit">Upload Image</button>
+        </form>
+    </div>
 </div>
-{% endblock %}
+{% endblock content %}

@@ -10,7 +10,7 @@
             <div class="card mb-4">
                 <img src="{% static 'images/educ.jpeg' %}" class="card-img-top" alt="Waste educational services">
                 <div class="card-body">
-                    <a href="">
+                    <a href="{% url 'accounts:educational' %}">
                         <h5 class="card-title">Educational</h5>
                     </a>
                     <p class="card-text">Learn how to handle wastes</p>
@@ -36,7 +36,7 @@
             <div class="card mb-4">
                 <img src="{% static 'images/consult.jpeg' %}" class="card-img-top" alt="Consultation">
                 <div class="card-body">
-                    <a href="#">
+                    <a href="{% url 'accounts:consultation' %}">
                         <h5 class="card-title">Consultation</h5>
                     </a>
                     <p class="card-text">Get expert advice on waste management and related concerns.</p>
@@ -49,7 +49,7 @@
             <div class="card mb-4">
                 <img src="{% static 'images/equip.jpeg' %}" class="card-img-top" alt="Waste Handling Equipment">
                 <div class="card-body">
-                    <a href="#">
+                    <a href="{% url 'accounts:contact_us' %}">
                         <h5 class="card-title">Waste collectionservices</h5>
                     </a>
                     <p class="card-text">Call for watse collection services</p>
@@ -76,7 +76,7 @@
 
     <div class="col-md-4">
         <div class="card mb-4">
-            <a href="#" class="text-decoration-none">
+            <a href="{% url 'accounts:recycle' %}" class="text-decoration-none">
                     <img src="{% static 'images/recycle1.jpeg' %}" class="card-img-top" alt="Upload Waste Images">
                     <div class="card-body">
                         <h5 class="card-title">Recycle wastes</h5>
